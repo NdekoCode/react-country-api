@@ -1,8 +1,17 @@
-const App = () => {
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { Navigation } from "./components/Navigation";
+import About from "./pages/About";
+import Home from "./pages/Home";
+
+export default function App() {
   return (
-    <div className="app">
-      <h1>API country</h1>
-    </div>
+    <>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </>
   );
-};
-export default App;
+}
