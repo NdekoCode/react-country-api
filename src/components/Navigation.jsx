@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export function Navigation() {
   return (
     <nav className="navbar">
-      <Link to="/">Acceuil</Link>
-      <Link to="/about">A propos</Link>
+      <NavLink to="/">Acceuil</NavLink>
+      <NavLink to="/about">A propos</NavLink>
     </nav>
   );
 }
