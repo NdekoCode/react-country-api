@@ -4,6 +4,8 @@ Simple React snippets
 Reactjs code snippets
 Mithril Emmet
 
+API:
+https://restcountries.com/v3.1/lang/french
 
 Dans settings.json, rajouter :
 
