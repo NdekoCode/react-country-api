@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 export default function App() {
   return (
     <BrowserRouter>
+      <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
