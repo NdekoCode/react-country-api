@@ -17,7 +17,7 @@ export function Navigation() {
           <li key={index}>
             <NavLink
               to={path}
-              className={(nav) => nav.isActive && "nav-active"}
+              className={(nav) => (nav.isActive ? "nav-active" : "")}
             >
               {name}
             </NavLink>
