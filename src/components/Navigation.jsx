@@ -1,14 +1,28 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export function Navigation() {
+  const links = [
+    {
+      path: "/",
+      name: "Acceuil",
+    },
+    {
+      path: "/about",
+      name: "A propos",
+    },
+  ];
   return (
     <nav className="navigation">
       <ul>
-        <li>
-          <Link to="/">Acceuil</Link>
-        </li>
-        <li>
-          <Link to="/about">A propos</Link>
-        </li>
+        {links.map(({ path, name }, index) => (
+          <li key={index}>
+            <NavLink
+              to={path}
+              className={(nav) => nav.isActive && "nav-active"}
+            >
+              {name}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );
