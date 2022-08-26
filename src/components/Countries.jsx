@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Loader from "./Loader";
 const Countries = () => {
   const [state, setState] = useState({
     data: [],
@@ -20,7 +21,17 @@ const Countries = () => {
       setState((d) => ({ ...d, dataError: false }));
     }
   }, []);
-  console.log(state);
+  const { data, dataLoading, dataError } = state;
+  if (dataLoading) {
+    return (
+      <div className="countries">
+        <h1 className="title">Countries</h1>
+        <div className="countries-container">
+          <Loader />
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="countries">
       <h1>Countries</h1>
