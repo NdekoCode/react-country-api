@@ -1,11 +1,13 @@
 const Card = ({ country }) => {
-  const { flags, name, translations } = country;
+  const { flags, translations, capital, population } = country;
   console.log(country);
   return (
     <li className="card">
-      <img src={flags.svg} alt={"Drapeau " + name.nativeName.fra.official} />
+      <img src={flags.svg} alt={"Drapeau " + translations.fra.official} />
       <div className="infos">
-        <h3>{translations.fra.official}</h3>
+        <h2>{translations.fra.common}</h2>
+        <h4>{capital}</h4>
+        <p>Po. {population.toLocaleString()}</p>
       </div>
     </li>
   );
