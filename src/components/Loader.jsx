@@ -1,8 +1,8 @@
 const Loader = () => {
   return (
-    <div class="wrapper">
-      <span class="dot"></span>
-      <div class="dots">
+    <div className="wrapper">
+      <span className="dot"></span>
+      <div className="dots">
         <span></span>
         <span></span>
         <span></span>
